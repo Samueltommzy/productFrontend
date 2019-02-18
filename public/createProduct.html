@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale =1"> 
+        <link rel="stylesheet" href="form.css">
+        <title>Product Page </title>
+    </head>
+    <body>
+        <form>
+            <div class="container">
+                <h1>Product Creation Form</h1>
+                <p>Please fill this form to create a product</p>
+                <hr>
+                <label for="Name">
+                    <b>Product Name </b>
+                </label>
+                <input type="text" placeholder="enter name" name="Name" id="product-name" required>
+                <label for="Price">
+                    <b>Product Price </b>
+                </label>
+                <input type="text" placeholder="enter price e.g $12" name="Price" id="product-price" required>
+                <label for="Category">
+                    <b>Product Category </b>
+                </label>
+                <input type="text" placeholder="Category" name="Category" id="product-category" required>
+                <label for="Image">
+                    <b>Image link </b>
+                </label>
+                <input type="link" placeholder="enter image url" name="Image" id="product-img" required>
+                <label for="Color">
+                    <b>Color </b>
+                </label>
+                <select id = "product-colors">
+                    <option value="red">Red</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="blue">Blue</option>
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                </select>
+                <label for="Desription">
+                    <b>Product Description </b>
+                </label>
+                <textarea placeholder="Describe this product" name="Description" id="product-description" style="height:200px;"  required>                   
+                </textarea>
+                <input type="submit" value="Create Product">
+            </div>
+        </form>  
+        <script src="form.js"></script> 
+    </body>
+</html>
