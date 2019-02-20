@@ -10,7 +10,7 @@ import { Data } from '../data';
 })
 export class ProductComponent implements OnInit {
   itemId: any
-  public Product: Data[] = [];
+  Product: any
   constructor(private pserv: ProductService, private route: ActivatedRoute) { 
     
   }

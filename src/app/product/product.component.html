@@ -29,7 +29,7 @@
   </div>-->
   <div class="container  mt-5">
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-5" *ngIf="Product">
             <img class="center-block product-img" src="{{Product?.Image}}" alt="{{Product?.Image}}">
         </div>
         <div class="col-md-4">
