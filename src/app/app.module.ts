@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProductService } from './product.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -26,7 +27,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     SlimLoadingBarModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MDBBootstrapModule
+    MDBBootstrapModule.forRoot(),
+    FlexLayoutModule
 
   ],
   schemas:[NO_ERRORS_SCHEMA],
