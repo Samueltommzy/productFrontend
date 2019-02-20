@@ -31,4 +31,10 @@ export class ProductComponent implements OnInit {
       }
     })
   }
+  addToCart(){
+
+  }
+  removeFromCart(){
+
+  }
 }
