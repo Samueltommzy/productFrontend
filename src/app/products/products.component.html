@@ -1,3 +1,28 @@
-<p>
-  products works!
-</p>
+<div class="row">
+  <div *ngif="AllProducts">
+    <div *ngFor = "let product of AllProducts">
+  <div class="col-sm-6 mb-3 mb-md-0">
+    <mdb-card>
+      <mdb-card-body>
+        <mdb-card-title>
+          <h5>{{product.productName}}</h5>
+        </mdb-card-title>
+        <mdb-card-text>With supporting text below as a natural lead-in to additional content</mdb-card-text>
+        <a href="#!" mdbBtn color="primary">Go somewhere</a>
+      </mdb-card-body>
+    </mdb-card>
+  </div>
+  </div>
+  </div>
+  <!--<div class="col-sm-6">
+    <mdb-card>
+      <mdb-card-body>
+        <mdb-card-title>
+          <h5>Special title treatment</h5>
+        </mdb-card-title>
+        <mdb-card-text>With supporting text below as a natural lead-in to additional content</mdb-card-text>
+        <a href="#!" mdbBtn color="primary">Go somewhere</a>
+      </mdb-card-body>
+    </mdb-card>
+  </div>-->
+</div>

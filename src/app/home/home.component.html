@@ -1,3 +1,80 @@
-<p>
-  home works!
-</p>
+<html>
+   <head>
+        <meta name="viewport" content="width=device-width,initial-scale =1"> 
+        <title>Product Page </title>
+    </head>
+   <div class="heading">
+     <h1>Product Creation Form</h1>
+     <p>Please fill this form to create a product</p>
+   </div>
+  <div class="card">
+    <div class="card-body">
+      <form [formGroup]="Form" novalidate>
+        <div class="form-group">
+          <label class="col-md-4">Product Name</label>
+          <input type="text" class="form-control" formControlName = "productName" placeholder="Enter Name"  />
+        </div>
+        <div *ngIf="Form.controls['productName'].invalid && (Form.controls['productName'].dirty || Form.controls['productName'].touched)" class="alert alert-danger">
+        <div *ngIf="Form.controls['productName'].errors.required">
+          Product Name is required.
+        </div>
+      </div>
+        <div class="form-group">
+          <label class="col-md-4">Price </label>
+          <input type="text" class="form-control" formControlName = "productPrice" placeholder="enter price e.g $12" />
+          </div>
+          <div *ngIf="Form.controls['productPrice'].invalid && (Form.controls['productPrice'].dirty || Form.controls['productPrice'].touched)" class="alert alert-danger">
+          <div *ngIf="Form.controls['productPrice'].errors.required">
+          Product Price is required.
+        </div>
+          </div>
+        <div class="form-group">
+          <label class="col-md-4">Category </label>
+          <input type="text" class="form-control" formControlName = "productCategory" placeholder="enter category" />
+          </div>
+          <div *ngIf="Form.controls['productCategory'].invalid && (Form.controls['productCategory'].dirty || Form.controls['productCategory'].touched)" class="alert alert-danger">
+          <div *ngIf="Form.controls['productCategory'].errors.required">
+          Product Category is required.
+        </div>
+          </div>
+        <div class="form-group">
+          <label class="col-md-4">Image</label>
+          <input type="text" class="form-control" formControlName = "productImage" placeholder="enter image link" />
+          </div>
+          <div *ngIf="Form.controls['productImage'].invalid && (Form.controls['productImage'].dirty || Form.controls['productImage'].touched)" class="alert alert-danger">
+          <div *ngIf="Form.controls['productImage'].errors.required">
+          Image link is required.
+        </div>
+          </div>
+        <div class="form-group">
+          <label class="col-md-4">Color </label>
+          <select id="product-colors" formControlName = "productColor" class="form-control">
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="blue">Blue</option>
+            <option value="white">Black</option>
+            <option value="red">White</option>
+          </select>
+        </div>
+        <div *ngIf="Form.controls['productColor'].invalid && (Form.controls['productColor'].dirty || Form.controls['productColor'].touched)" class="alert alert-danger">
+          <div *ngIf="Form.controls['productColor'].errors.required">
+          Color is required.
+        </div>
+          </div>
+         <div class="form-group">
+          <label class="col-md-4">Description</label>
+          <textarea placeholder="Describe this product" formControlName = "productDescription" class="form-control" style="height:200px;">
+          </textarea>
+        </div>
+        <div *ngIf="Form.controls['productDescription'].invalid && (Form.controls['productDescription'].dirty || Form.controls['productDescription'].touched)" class="alert alert-danger">
+          <div *ngIf="Form.controls['productDescription'].errors.required">
+          Description is required.
+        </div>
+          </div>
+        <div class="form-group">
+          <button (click) = "createProduct()" class="btn btn-primary">Create Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  </html>
