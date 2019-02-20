@@ -26,7 +26,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     SlimLoadingBarModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule
 
   ],
   schemas:[NO_ERRORS_SCHEMA],
