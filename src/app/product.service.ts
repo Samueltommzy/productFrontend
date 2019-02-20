@@ -27,8 +27,8 @@ export class ProductService {
     return this.http.post(`${this.url}/product`, productObject)
    }
 
-   loadProduct(product) {
-    let productId = product._id
-    return this.http.get(`${this.url}/product/${productId}`)
+   loadProduct(id) {
+     console.log("id in service" , id)
+    return this.http.get(`${this.url}/product/${id}`)
    }
 }
