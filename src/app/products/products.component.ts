@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
+import { Routes, RouterModule,Router} from '@angular/router';
+import { ProductComponent } from '../product/product.component';
+
 
 @Component({
   selector: 'app-products',
@@ -8,7 +11,7 @@ import { ProductService } from '../product.service';
 })
 export class ProductsComponent implements OnInit {
   AllProducts : any
-  constructor( private product: ProductService) { }
+  constructor( private product: ProductService,private router: Router) { }
 
   ngOnInit() {
     this.loadAllProducts();
@@ -21,4 +24,17 @@ export class ProductsComponent implements OnInit {
     console.log("all products", this.AllProducts);
   });
  }
-}
+
+ loadProduct(id){
+   this.product.loadProduct(id).subscribe((data)=>{
+        if (data['success']) {
+          let productId = data['data']._id
+          this.router.navigate(['/product',productId]);
+        }
+        else{
+          console.log("res data" , data);
+        }
+      })
+    
+  }
+ }
