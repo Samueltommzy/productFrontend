@@ -1,4 +1,4 @@
-  <div class="cardList"   *ngFor = "let product of AllProducts">
+  <!--<div class="cardList"   *ngFor = "let product of AllProducts">
   <div class="col">
     <mdb-card>
       <mdb-card-body>
@@ -11,4 +11,23 @@
       </mdb-card-body>
     </mdb-card>
   </div>
-  </div>
+  </div>-->
+  <div class="card-deck-wrapper">
+    <div class="card-deck">
+        <div class="card" *ngFor="let product of AllProducts">
+            <div class="card-header text-xs-center">
+                {{product.NAme}}
+            </div>
+            <img class="card-img-top center-block product-item" src="{{product.Image}}" alt="{{product.Name}}">
+            <div class="card-body text-xs-center">
+                <h4 class="card-text">Price: ${{product.Price}}</h4>
+            </div>
+            <div class="card-footer text-xs-center">
+                <button class="btn btn-primary mr-2" (click)="loadProduct(product._id)">View Product</button>
+            </div>
+            <!-- <div class="card-body">
+                <p class="card-text">{{product.desc}}</p>
+            </div> -->
+        </div>
+    </div>
+</div>
